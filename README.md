@@ -213,3 +213,71 @@ See you tomorrow for Day 2: Task Mastery! 🚀
 
 ---
 *Having trouble? Drop a comment below or find me on social @creator_x - happy to help debug! 👨‍💻*
+
+---
+
+## Day 2: Build Task Mastery (100 XP)
+**🎯 Objective**: Teach QuestBot to manage tasks like a true sidekick  
+**⏱️ Time**: 45 minutes  
+**🧠 Skills Learned**: Lists, loops, user input validation
+
+### Quest Tasks:
+
+#### 1. Create the Task Codex (30 XP - 10 minutes)
+**Build on Day 1:**
+1. Open `day2_starter.py`
+2. Add your Day 1 greeting code at the top
+3. **Create a task storage system:**
+   ```python
+   tasks = []  # Empty list to store missions
+   ```
+4. **Collect one task:**
+   ```python
+   task = input("Log a mission (e.g., Study AI): ")
+   tasks.append(task)
+   print("Mission Log:", tasks)
+   ```
+
+**🎮 Test It**: Add a task and see it in your mission log
+
+#### 2. Loop the Quest Cycle (40 XP - 20 minutes)
+**Add continuous task entry:**
+1. **Replace single task input with a loop:**
+   ```python
+   while True:
+       task = input("Log a mission (or 'done' to finish): ")
+       if task.lower() == "done":
+           break
+       tasks.append(task)
+       print(f"✅ Added: {task}")
+   ```
+
+**🎮 Test It**: 
+- Add 3-4 tasks
+- Type "done" to finish
+- See all your tasks collected
+
+#### 3. Display with Epic Flair (30 XP - 15 minutes)
+**Make your output professional:**
+```python
+print(f"\n{name}'s Epic Mission Log:")
+print("="*40)
+for i, task in enumerate(tasks, 1):
+    print(f"Mission {i}: {task}")
+```
+
+**🏆 Bonus Challenge (10 XP)**: 
+Add motivational messages based on task count:
+```python
+if len(tasks) == 1:
+    print(f"🎯 {name}, laser focus! One mission, maximum impact!")
+elif len(tasks) <= 3:
+    print(f"💪 Perfect balance! {len(tasks)} missions ready to conquer!")
+```
+
+**📸 Quest Log**: Share your Mission Log screenshot  
+**🎖️ Reward**: *Task Master* badge unlocked!
+
+**✅ Day 2 Checkpoint**: QuestBot collects multiple tasks and displays them professionally
+
+---
