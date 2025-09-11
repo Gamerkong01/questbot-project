@@ -281,3 +281,88 @@ elif len(tasks) <= 3:
 **✅ Day 2 Checkpoint**: QuestBot collects multiple tasks and displays them professionally
 
 ---
+
+## Day 3: Unleash QuestBot's Power (100 XP)
+**🎯 Objective**: Add task deletion and motivational quotes for a complete AI assistant  
+**⏱️ Time**: 60 minutes  
+**🧠 Skills Learned**: Random selection, data manipulation, error handling
+
+### Quest Tasks:
+
+#### 1. Master Task Control (40 XP - 20 minutes)
+**Add task deletion feature:**
+1. Open `day3_starter.py`
+2. **Import random module:**
+   ```python
+   import random
+   ```
+3. **Create motivational quotes:**
+   ```python
+   quotes = [
+       "Keep slaying, Recruit!",
+       "You're unstoppable!",
+       "Forge your future!",
+       "Every mission brings you closer to mastery!"
+   ]
+   ```
+4. **Add deletion logic after displaying tasks:**
+   ```python
+   delete = input("\nDelete a completed mission? Enter number (or 'no'): ")
+   if delete.isdigit() and 1 <= int(delete) <= len(tasks):
+       removed = tasks.pop(int(delete) - 1)
+       print(f"🎉 Vanquished: {removed}")
+   ```
+
+**🎮 Test It**: Add tasks, then delete one by its number
+
+#### 2. Add AI Wisdom (30 XP - 15 minutes)
+**Display random motivational quotes:**
+```python
+print(f"\n🌟 QuestBot's Daily Wisdom:")
+print(f"'{random.choice(quotes)}'")
+```
+
+**🎮 Test It**: Run multiple times to see different quotes
+
+#### 3. Portfolio Polish (30 XP - 25 minutes)
+**Final touches:**
+1. **Add error handling for invalid deletion:**
+   ```python
+   if delete.isdigit():
+       task_num = int(delete)
+       if 1 <= task_num <= len(tasks):
+           # deletion code
+       else:
+           print("❌ Invalid mission number")
+   ```
+2. **Create a README.md file:**
+   ```markdown
+   # QuestBot - AI Task Assistant
+   
+   Built during the 4IR Quest 3-Day Challenge
+   
+   ## Features
+   - Personalized greetings
+   - Task management
+   - Motivational quotes
+   - Task deletion
+   
+   ## Skills Learned
+   - Python basics
+   - User input handling
+   - List manipulation
+   - Loops and conditionals
+   ```
+
+**🏆 Bonus Challenges (10 XP each)**:
+- Add task editing functionality
+- Create task categories (work, personal, learning)
+- Add task priority levels
+- Save tasks to a file
+
+**📸 Quest Log**: Share your complete QuestBot in action!  
+**🎖️ Reward**: *Quest Champion* badge unlocked!
+
+**✅ Final Checkpoint**: You've built a complete AI assistant!
+
+---
